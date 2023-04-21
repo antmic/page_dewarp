@@ -1,0 +1,26 @@
+{
+	"name": "page_dewarp",
+	"version": "1.0.0",
+	"description": "page_dewarp ===========",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mzucker/page_dewarp.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mzucker/page_dewarp/issues"
+	},
+	"homepage": "https://github.com/mzucker/page_dewarp#readme",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"multer": "^1.4.5-lts.1",
+		"nanoid": "^4.0.0"
+	}
+}
