@@ -1,4 +1,6 @@
 // script.js
+let uuid = self.crypto.randomUUID();
+console.log(uuid);
 
 const form = document.getElementById('form');
 
@@ -6,10 +8,9 @@ form.addEventListener('submit', submitForm);
 
 function submitForm(e) {
 	e.preventDefault();
-	const name = document.getElementById('name');
 	const files = document.getElementById('files');
 	const formData = new FormData();
-	formData.append('name', name.value);
+	formData.append('userID', uuid);
 	for (let i = 0; i < files.files.length; i++) {
 		formData.append('files', files.files[i]);
 	}
@@ -18,6 +19,7 @@ function submitForm(e) {
 		body: formData,
 	})
 		.then(res => res.json())
-		.then(res => console.log(res.message))
+		.then(res => alert(res.message))
+		.then(res => alert(res))
 		.catch(err => ('Error occured', err));
 }
